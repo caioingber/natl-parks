@@ -1,0 +1,20 @@
+$sizes: (
+  "small": 14px,
+  "medium": 20px,
+  "title": 50px,
+);
+@mixin flex($justify: false, $align: false, $direction: false) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $align {
+    align-items: $align;
+  }
+  @if $direction {
+    flex-direction: $direction;
+  }
+}
